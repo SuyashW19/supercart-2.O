@@ -1,0 +1,10 @@
+{
+  "name": "SuperCart - 10-Minute Grocery Delivery",
+  "description": "India's ultra-fast 10-minute grocery delivery app for fresh fruits, vegetables, dairy, snacks, and daily household essentials.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

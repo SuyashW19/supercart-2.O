@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  body {
+    font-family: var(--font-sans);
+  }
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Banner animations */
+@keyframes shineSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  30%, 100% {
+    transform: translateX(300%) skewX(-20deg);
+  }
+}
+
+.animate-shine-sweep {
+  animation: shineSweep 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes bannerFloatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-banner-float {
+  animation: bannerFloatY 4s ease-in-out infinite;
+}
+
+@keyframes kenBurnsSlow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.06);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurnsSlow 5s ease-out forwards;
+}
+
+@keyframes staggeredTextSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-text-stagger-1 {
+  animation: staggeredTextSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+.animate-text-stagger-2 {
+  animation: staggeredTextSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.animate-text-stagger-3 {
+  animation: staggeredTextSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+.animate-text-stagger-4 {
+  animation: staggeredTextSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+
